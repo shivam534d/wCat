@@ -56,7 +56,6 @@ function lineSpace(path) {
   // split the contents by new line
   let lines = data.replace(/\n\s*\n/g, '\n\n');
   console.log(lines);
-  return lines;
 }
 
 module.exports = {

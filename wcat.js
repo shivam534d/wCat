@@ -1,9 +1,7 @@
 let display = require('./commands/display.js');
 let input = process.argv.slice(2);
 let option = input[0];
-
-if (input[2].length == '2') {
-} else if (input[1].length == '2') {
+if (input[1].length == '2') {
   if (input[0] == '-s' && input[1] == '-n') {
   } else if (input[0] == '-s' && input[1] == '-n') {
   }
@@ -25,13 +23,6 @@ if (input[2].length == '2') {
       }
       break;
     default:
-  }
-}
-
-if (input[0] == '2') {
-} else if (input[0] == '-s' && input[1] == '-n') {
-  for (let idx = 1; idx < input.length; idx++) {
-    display.numberedAllLines(display.lineSpace(input[idx]));
   }
 } else {
   // loop to print all the Files in Console
