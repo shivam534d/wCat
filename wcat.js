@@ -6,7 +6,7 @@ if (input[2].length == '2') {
   if (
     (input[0] == '-s' && input[1] == '-b' && input[1] == '-n') ||
     (input[0] == '-b' && input[1] == '-s' && input[1] == '-n') ||
-    (input[0] == '-b' && input[1] == '-n' && input[1] == '-s') ||
+    (input[0] == '-b' && input[1] == '-n' && input[1] == '-s')
   ) {
     for (let idx = 2; idx < input.length; idx++) {
       display.sb(input[idx]);
@@ -14,7 +14,7 @@ if (input[2].length == '2') {
   } else if (
     (input[0] == '-s' && input[1] == '-n' && input[1] == '-b') ||
     (input[0] == '-n' && input[1] == '-s' && input[1] == '-b') ||
-    (input[0] == '-n' && input[1] == '-b' && input[1] == '-s') ||
+    (input[0] == '-n' && input[1] == '-b' && input[1] == '-s')
   ) {
     for (let idx = 2; idx < input.length; idx++) {
       display.sn(input[idx]);
