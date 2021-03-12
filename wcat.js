@@ -1,5 +1,41 @@
-let viewfn = require('./commands/display.js');
+let display = require('./commands/display.js');
 let input = process.argv.slice(2);
-let cmd = input[0];
+let option = input[0];
 
-viewfn.display(input[0]);
+if (input[2].length == '2') {
+} else if (input[1].length == '2') {
+  if (input[0] == '-s' && input[1] == '-n') {
+  } else if (input[0] == '-s' && input[1] == '-n') {
+  }
+} else if (input[0].length == '2') {
+  switch (option) {
+    case '-s':
+      for (let idx = 1; idx < input.length; idx++) {
+        display.lineSpace(input[idx]);
+      }
+      break;
+    case '-b':
+      for (let idx = 1; idx < input.length; idx++) {
+        display.numberedLines(input[idx]);
+      }
+      break;
+    case '-n':
+      for (let idx = 1; idx < input.length; idx++) {
+        display.numberedAllLines(input[idx]);
+      }
+      break;
+    default:
+  }
+}
+
+if (input[0] == '2') {
+} else if (input[0] == '-s' && input[1] == '-n') {
+  for (let idx = 1; idx < input.length; idx++) {
+    display.numberedAllLines(display.lineSpace(input[idx]));
+  }
+} else {
+  // loop to print all the Files in Console
+  for (let idx = 0; idx < input.length; idx++) {
+    display.fullPrint(input[idx]);
+  }
+}
