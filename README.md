@@ -14,10 +14,6 @@ node wcat.js [options] [files]
 | -b      | Adds Line Number to Non-empty Lines                   |
 | -n      | Adds Line Number to All the Lines                     |
 
-```bash
-node wcat.js [-s -b||-n] [filename or Path]
-```
-
 _-n and -b are 2 options which are mutually exclusive so if user types both of them together only the first enter option should work._
 
 ## Commands:
