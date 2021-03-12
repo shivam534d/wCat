@@ -15,15 +15,10 @@ function getLinesArr(path) {
 
 // Full Print of all the Files
 function fullPrint(path) {
-  let isFile = isFileOrNot(path);
-  if (isFile) {
-    lines = getLinesArr(path);
-    lines.forEach((line) => {
-      console.log(line);
-    });
-  } else {
-    console.log(path + 'is not a file');
-  }
+  lines = getLinesArr(path);
+  lines.forEach((line) => {
+    console.log(line);
+  });
 }
 
 // Number All Lines
@@ -50,6 +45,36 @@ function numberedLines(path) {
   });
 }
 
+function sn(path) {
+  // read contents of the file
+  let data = fs.readFileSync(path, 'UTF-8');
+  // split the contents by new line
+  let reducedLines = data.replace(/\n\s*\n/g, '\n\n');
+  let lines = reducedLines.split(/\r?\n/);
+  let count = 1;
+  lines.forEach((line) => {
+    console.log(count + ' ' + line);
+    count++;
+  });
+}
+
+function sb(path) {
+  // read contents of the file
+  let data = fs.readFileSync(path, 'UTF-8');
+  // split the contents by new line
+  let reducedLines = data.replace(/\n\s*\n/g, '\n\n');
+  let lines = reducedLines.split(/\r?\n/);
+  let count = 1;
+  lines.forEach((line) => {
+    if (line == '') {
+      console.log(line);
+    } else {
+      console.log(count + ' ' + line);
+      count++;
+    }
+  });
+}
+
 function lineSpace(path) {
   // read contents of the file
   let data = fs.readFileSync(path, 'UTF-8');
@@ -63,6 +88,8 @@ module.exports = {
   lineSpace,
   numberedAllLines,
   numberedLines,
+  sb,
+  sn,
 };
 
 // ['asdasda', '', '', 'asdasdas', 'asdsadads', 'asadasd'];
